@@ -15,13 +15,17 @@ namespace ConsoleApp2
         {
             string testePrimitivo = string.Empty;
             String outrotestePrimitivo;
-            bool testComp = "123" == "123";
-            Boolean testeComp = "123" == "123";// primitivos  
-        
+            bool testComp;
+            Boolean testeComp;// primitivos  
+
+            bool? testeBoolNull;// permite informar verdadeiro u falso
+
+            int numerosInteiros = 999;
+            long numeroInteirolongo = 85642132394;
             
 
-
             var testeFora = string.Empty;
+            testeFora = "teste";
             
            
             var teste1 = "string";// texto
