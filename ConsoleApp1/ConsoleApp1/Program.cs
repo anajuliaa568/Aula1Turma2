@@ -20,7 +20,7 @@ namespace ConsoleApp2
             var numeroDoLivro = Console.ReadLine();
             // Aqui realizo a comparação das informações 
             // do livro informado com o que tenho disponivel 
-            // em estoque 
+            // em estoque  
             if (numeroDoLivro == "123456")
             {
                 // informo que este livro já está alocado
