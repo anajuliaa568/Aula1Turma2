@@ -24,7 +24,7 @@ namespace ConsoleApp2
             if (numeroDoLivro == "123456")
             {
                 // informo que este livro já está alocado
-                Console.WriteLine("Livro Indisponivel!!!");
+                Console.WriteLine("Livro Indisponivel!!!"); 
                  Console.ReadKey();
                 //Finaliza o metodo 
                 return;
@@ -33,18 +33,12 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("Deseja alocar o Livro? (1)sim (2)não");
                 var resposta = Console.ReadLine();
-                if(resposta == "1");
+                if(resposta == "1")
                 { 
                     Console.WriteLine("Livro alocado");
                     Console.ReadKey();
                 }
-
             }
-
-
-            
-
         }
-
     }
 }
