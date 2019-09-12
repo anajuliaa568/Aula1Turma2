@@ -24,7 +24,7 @@ namespace ConsoleApp2
             if (numeroDoLivro == "123456")
             {
                 // informo que este livro já está alocado
-                Console.WriteLine("Livro Indisponivel!!!"); 
+                Console.WriteLine("Livro Indisponivel!!!");
                  Console.ReadKey();
                 //Finaliza o metodo 
                 return;
