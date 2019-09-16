@@ -9,102 +9,143 @@ namespace ExrcicioTextinho
     class Program
     {
         static void Main(string[] args)
-
         {
 
             ForeachComSplitLista();
 
-
-            Console.WriteLine("Informe o seu nome");
-
-            var texto = @"Aqui;temos;um;texto;que;iremos;mudar;para;uma;coleçãoe;vamos;colocar;isto{Console.ReadLine()};para;depois;usar;com;o;replace";
-
-            var textoInicial = Console.ReadLine();
-
-            var textoInicial01 = texto.Split(';');
-
-            foreach (var item in textoInicial01)
+        }   
+            private static void IniciandoForeach01()
             {
-                if (textoInicial == item)
+                Console.WriteLine("Informar o texto:");
+                var conteudoDoTexto = Console.ReadLine();
+
+                foreach (var item in conteudoDoTexto)
                 {
-                    Console.WriteLine("texto encontrado");
+                    if (item == 'e')
+                        continue;
+
+                    Console.WriteLine(item);
                 }
+
+                Console.ReadKey();
             }
-            Console.ReadKey();
-
-
-        }
-
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private static void ForeachComSplitLista()
-        {
-            var conteudo = "nome:Priscilla,idade:26;nome:Giomar,idade:75;nome:Eusebio,idade:29";
-
-            var listaDeInformacoes = conteudo.Split(';');
-
-            Console.WriteLine("Usuarios cadastrados no sistema:");
-
-            foreach (var item in listaDeInformacoes)
+            /// <summary>
+            /// Metodo de busca com split e informando o nome
+            /// </summary>
+            private static void ForeachComSplit()
             {
-                Console.WriteLine(item.Split(',')[0]);
-            }
+                Console.WriteLine("Informe o seu nome:");
 
-            Console.WriteLine("Informe o nome do sistema:");
-            var nomebusca = Console.ReadLine();
+                var conteudoDoTexto = $"Aqui;temos;um;texto;que;iremos;mudar;para;uma;coleção;e;vamos;colocar;isto;{Console.ReadLine()};para;depois;usar;com;o;replace";
 
-            foreach (var item in listaDeInformacoes)
-            {
-                var informacoesSplit = item.Split(',');
+                Console.WriteLine("Informe a palavra para realizar a busca:");
+                var palavra = Console.ReadLine();
 
-                var nome = informacoesSplit[0].Split(':')[1];
-                var idade = informacoesSplit[1].Split(':')[1];
+                var conteudoTextoSplit = conteudoDoTexto.Split(';');
 
-                if (item == nomebusca)
+                foreach (var item in conteudoTextoSplit)
                 {
+                    if (palavra == item)
+                        Console.WriteLine("Palavra encontrada com sucesso!");
+                }
+
+                Console.ReadKey();
+            }
+            private static void ForeachComSplitLista()
+            {
+                var conteudo = "nome:Felipe,idade:17;nome:Giomar,idade:75;nome:Eusebio,idade:29";
+
+                var listaDeInformacoes = conteudo.Split(';');
+
+            /*  Console.WriteLine("Usuários cadastrados no sistema:");
+
+              foreach (var item in listaDeInformacoes)
+              {
+                  Console.WriteLine(item.Split(',')[0]);
+              } */
+
+            // Console.WriteLine("Informe um nome do sistema:");
+
+            //var nomeBusca = Console.ReadLine();
+
+            foreach (var item in listaDeInformacoes)
+            {
+                var inforacoesSplit = item.Split(',');
+
+                var nome = inforacoesSplit[0].Split(':')[1];
+                var idade = inforacoesSplit[1].Split(':')[1];
+
+                if (int.Parse(idade) >= 18)
+
                     Console.WriteLine($"O {nome} está com {idade} anos de idade.");
-                }
+
             }
 
-            Console.ReadKey();
-        }
-
-        private static void ConsultaCarros()
-        {
-            var conteudo = @" carro:Gol,marca: volkswagen,ano: 2000; carro: Jetta,marca: volkswagen,ano: 2012;
-            carro: Sportage,marca: Kia,ano: 2011;carro: Hb20,marca: hyundai,ano: 2015";
-
-            listarInformacoesPorNome(conteudo);
-
-            Console.WriteLine("Digite o nome do carro para a busca:");
-            var nomeDoCarro = Console.ReadLine();
-
-            foreach (var item in listaDeInformacoes)
-            {
-                var separandoInformacoes = item.Split(',');
-                var nomeCarro = separandoInformacoes[0].Split(':')[1];
-
-                Console.WriteLine($"Nome do Carro:{nomeCarro}");
+                Console.ReadKey();
             }
-        }
 
-        private static string[] RetornaVeiculo(string conteudo, string nomeVeiculo)
-        {
-            var listaDeInformacoes = conteudo.Split(';');
-            foreach (var item in listaDeInformacoes)
+            private static void ConsultaCarros()
             {
-                var separandoInformacoes = item.Split(',');
+                //Base de informações
+                var conteudo = "carro:Gol,marca:volkswagen,ano:2000;carro:Jetta,marca:volkswagen,ano:2012;carro:Sportage,marca:Kia,ano:2011;carro:Hb20,marca:hyundai,ano:2015";
 
-                var nomeDoCarro = obterValor(separandoInformacoes[0]);
-                if (true)
+                ListarInformacoesPorNome(conteudo);
+
+                Console.WriteLine("Digite o nome do carro para a busca:");
+                var nomeCarro = Console.ReadLine();
+
+                var veiculoSelecionado = RetornaVeiculo(conteudo, nomeCarro);
+
+                Console.WriteLine(string.Format("O carro {0} é da marca {1} fabricado no ano {2}",
+                    ObterValor(veiculoSelecionado, "carro"),
+                    ObterValor(veiculoSelecionado, "marca"),
+                    ObterValor(veiculoSelecionado, "ano")));
+
+                Console.ReadKey();
+            }
+
+            private static void ListarInformacoesPorNome(string conteudo)
+            {
+                var listaDeInformacoes = conteudo.Split(';');
+
+                foreach (var item in listaDeInformacoes)
                 {
+                    var separandoInformacoes = item.Split(',');
+                    var nomeCarro = separandoInformacoes[0].Split(':')[1];
 
+                    Console.WriteLine($"Nome do carro {nomeCarro}");
                 }
-                return separandoInformacoes;
             }
-        }
+
+            private static string[] RetornaVeiculo(string conteudo, string nomeVeiculo)
+            {
+                var listaDeInformacoes = conteudo.Split(';');
+
+                foreach (var item in listaDeInformacoes)
+                {
+                    var separandoInformacoes = item.Split(',');
+
+                    var nomeDoCarro = ObterValor(separandoInformacoes, "carro");
+
+                    if (nomeDoCarro == nomeVeiculo)
+                        return separandoInformacoes;
+                }
+
+                return new string[0];
+            }
+            private static string ObterValor(string[] colecao, string tipo)
+            {
+                foreach (var item in colecao)
+                {
+                    var quebrandoInformacao = item.Split(':');
+
+                    if (quebrandoInformacao[0] == tipo)
+                        return quebrandoInformacao[1];
+                }
+
+                return string.Empty;
+            }
+
+    
     }
 }
