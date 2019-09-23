@@ -15,5 +15,6 @@ namespace LocacaoBiblioteca.Model
         public int UsuarioAlteracao { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataAlteracao { get; set; }
+        public object Login { get; set; }
     }
 }

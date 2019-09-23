@@ -12,6 +12,7 @@ namespace LocacaoBiblioteca.Controller
     /// </summary>
    public class UsuarioController
    {
+        private int IdContador = 0;
         public UsuarioController()
         {
 
@@ -19,6 +20,8 @@ namespace LocacaoBiblioteca.Controller
 
             ListaDeUsuarios.Add(new Usuario()
             {
+                //Adicionar o Id contador incrementando o memso com  ele +1 "++" 
+                Id = IdContador++,
                 Login = "Admin",
                 Senha = "Admin"
 
@@ -26,9 +29,11 @@ namespace LocacaoBiblioteca.Controller
 
             ListaDeUsuarios.Add(new Usuario()                
             {
+                Id = IdContador++,
                 Login = "pri22",
                 Senha = "1234"
             });
+
         }
         /// <summary>
         /// metodo que realiza o login dentro do nosso sistema 
@@ -45,6 +50,39 @@ namespace LocacaoBiblioteca.Controller
             
         }
         public List<Usuario> ListaDeUsuarios { get; set; }
+        /// <summary>
+        /// Metodo usado para adicionar um novo usuario no sistema 
+        /// </summary>
+        /// <param name="parametro">Novo usuario que será adicionado a lista</param>
+        public void CadastroUsuario(Usuario parametro )
+        {
+            parametro.Id = IdContador++;
+            //adicionar o meu usuario a minha lista 
+            ListaDeUsuarios.Add(parametro);
+        }
 
-   }
+        public static bool LoginSistema(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Metodo que retonar nossa lista interna de usuario
+        /// </summary>
+        /// <returns>Lista Contendo os usuarios</returns>
+        public List<Usuario> RetornaListaDeUsuarios()
+        {
+            //retorna agora somente a lista de usuarios ativos com a expressão "where"...
+            return ListaDeUsuarios.Where(x => x.Ativo).ToList<Usuario>();
+        }
+        /// <summary>
+        /// Metodo que desativa um registro de usuario cadastrado em nossa lista 
+        /// </summary>
+        /// <param name="identificandoID"></param> parametro que identifica o usuario que será desativado
+        public void RemoverUsuarioPorId(int identificandoID)
+        {
+            // Aqui usamos o metodo FirstOrDefault para localizar nosso usuario dentro da lista 
+            // com isso conseguimos acessar as prioridades 
+            ListaDeUsuarios.FirstOrDefault(x => x.Id == identificandoID).Ativo = false;
+        }
+    }
 }
