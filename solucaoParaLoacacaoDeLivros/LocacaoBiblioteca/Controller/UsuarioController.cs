@@ -12,27 +12,11 @@ namespace LocacaoBiblioteca.Controller
     /// </summary>
    public class UsuarioController
    {
-        private int IdContador = 0;
+        private LocacaoContext contextDB = new LocacaoContext();
+
+           
         public UsuarioController()
         {
-
-            ListaDeUsuarios = new List<Usuario>();
-
-            ListaDeUsuarios.Add(new Usuario()
-            {
-                //Adicionar o Id contador incrementando o memso com  ele +1 "++" 
-                Id = IdContador++,
-                Login = "Admin",
-                Senha = "Admin"
-
-            });
-
-            ListaDeUsuarios.Add(new Usuario()                
-            {
-                Id = IdContador++,
-                Login = "pri22",
-                Senha = "1234"
-            });
 
         }
         /// <summary>
@@ -44,27 +28,23 @@ namespace LocacaoBiblioteca.Controller
         /// <param name="Usuario">Passamos um objeto de nome USUARIO com parametro </param>
         /// <param name="senha">Senha do usuario dentro do sistema </param>
         /// <returns>Retorna verdadeiro quando existir o usuario com este login e senha </returns>
-        public bool loginSistema(Usuario usuario)
+        public bool LoginSistema(Usuario usuario)
         {
-            return ListaDeUsuarios.Exists(x => x.Login == usuario.Login && x.Senha == usuario.Senha);
+            return RetornaListaDeUsuarios().Exists(x => x.Login == usuario.Login && x.Senha == usuario.Senha);
             
         }
-        public List<Usuario> ListaDeUsuarios { get; set; }
+        
         /// <summary>
         /// Metodo usado para adicionar um novo usuario no sistema 
         /// </summary>
         /// <param name="parametro">Novo usuario que será adicionado a lista</param>
         public void CadastroUsuario(Usuario parametro )
         {
-            parametro.Id = IdContador++;
+            parametro.Id = contextDB.IdContadorUsuarios++;
             //adicionar o meu usuario a minha lista 
-            ListaDeUsuarios.Add(parametro);
+            contextDB.ListaDeUsuarios.Add(parametro);
         }
-
-        public static bool LoginSistema(Usuario usuario)
-        {
-            throw new NotImplementedException();
-        }
+     
         /// <summary>
         /// Metodo que retonar nossa lista interna de usuario
         /// </summary>
@@ -72,7 +52,7 @@ namespace LocacaoBiblioteca.Controller
         public List<Usuario> RetornaListaDeUsuarios()
         {
             //retorna agora somente a lista de usuarios ativos com a expressão "where"...
-            return ListaDeUsuarios.Where(x => x.Ativo).ToList<Usuario>();
+            return contextDB.ListaDeUsuarios.Where(x => x.Ativo).ToList<Usuario>();
         }
         /// <summary>
         /// Metodo que desativa um registro de usuario cadastrado em nossa lista 
@@ -82,7 +62,7 @@ namespace LocacaoBiblioteca.Controller
         {
             // Aqui usamos o metodo FirstOrDefault para localizar nosso usuario dentro da lista 
             // com isso conseguimos acessar as prioridades 
-            ListaDeUsuarios.FirstOrDefault(x => x.Id == identificandoID).Ativo = false;
+           contextDB.ListaDeUsuarios.FirstOrDefault(x => x.Id == identificandoID).Ativo = false;
         }
     }
 }

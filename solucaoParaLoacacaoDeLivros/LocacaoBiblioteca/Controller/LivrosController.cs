@@ -9,34 +9,37 @@ namespace LocacaoBiblioteca.Controller
 {
     public class LivrosController
     {
-        private int IdContador = 1;
+        private LocacaoContext contextDB = new LocacaoContext();
+
         public LivrosController()
         {
-            Livros = new List<Livro>();
-
-            Livros.Add(new Livro()
-            {
-                Id = IdContador++,
-                Nome = "Meu Primeiro Livro"
-            }) ;
-
-            Livros.Add(new Livro()
-            {
-                Id = IdContador++,
-                Nome = "Meu Segundo Livro"
-            }) ;
+           
         }
 
-        public List<Livro> ListaDeLivros { get; private set; }
-        private List<Livro> Livros { get; set; }
+       // public List<Livro> ListaDeLivros { get; private set; }
+        //private List<Livro> Livros { get; set; }
 
         public void AdicionarLivro(Livro parametroLivro )
         {
-            Livros.Add(parametroLivro);
+            
+            parametroLivro.Id = contextDB.IdContadorLivros++;
+
+           
+            contextDB.ListaDeLivros.Add(parametroLivro);
         }
         public List<Livro> RetorneListaDeLivros()
         {
-            return ListaDeLivros;
+            return contextDB.ListaDeLivros.Where(x => x.Ativo).ToList<Livro>();
+        }
+        /// <summary>
+        /// metodo para desativar o registro de livro pelo id 
+        /// </summary>
+        /// <param name="livroId"></param>
+        public void RemoverLivroPeloId(int livroId)
+        {
+            var Livro = contextDB.ListaDeLivros.FirstOrDefault(x => x.Id == livroId);
+            if (Livro != null)
+                Livro.Ativo = false;
         }
     }
    

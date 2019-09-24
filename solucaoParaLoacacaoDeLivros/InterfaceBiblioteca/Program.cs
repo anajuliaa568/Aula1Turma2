@@ -34,23 +34,24 @@ namespace InterfaceBiblioteca
         /// </summary>
         private static void MostraMenuSistema()
         {
-            Console.Clear();
-            Console.WriteLine("Sistema de Locação de Livro 1.0");
-            Console.WriteLine("Menu sistema");
-            Console.WriteLine("1 - Listar usuario");
-            Console.WriteLine("2 - listar livro");
-            Console.WriteLine("3 - Cadastrar Livro");
-            Console.WriteLine("4 - cadastro de usuario");
-            Console.WriteLine("5 remover usuario");
-            Console.WriteLine("6 - Trocar Usuario");
             var menuEscolhido = int.MinValue;
-            
-            //aqui definimos se for diferente de 0 mantemos o sistema  aberto se não finalizamos 
 
-            // var resposta = int.Parse(Console.ReadLine());
             while (menuEscolhido != 0)
-            {
-               
+           {  
+
+                Console.Clear();
+                Console.WriteLine("Sistema de Locação de Livro 1.0");
+                Console.WriteLine("Menu sistema");
+                Console.WriteLine("1 - Listar usuario");
+                Console.WriteLine("2 - listar livro");
+                Console.WriteLine("3 - Cadastrar Livro");
+                Console.WriteLine("4 - cadastro de usuario");
+                Console.WriteLine("5 - remover usuario");
+                Console.WriteLine("6 - Remover Livro");
+                Console.WriteLine("7 - Trocar Usuario");           
+            
+              //aqui definimos se for diferente de 0 mantemos o sistema  aberto se não finalizamos 
+              // var resposta = int.Parse(Console.ReadLine());                                   
                 //aqui vamos pegar numero digitado
 
                 menuEscolhido = int.Parse(Console.ReadKey(true).KeyChar.ToString());
@@ -62,10 +63,18 @@ namespace InterfaceBiblioteca
                         MostraMenuSistema();
                         break;
                     case 2:
+                        
                         //Livro livro = new Livro();
                         // Console.WriteLine(livro.Nome);
                         MostrarLivro();
                         MostraMenuSistema();
+                        break;
+                    case 3:
+                        //Livro livro = new Livro();
+                        // Console.WriteLine(livro.Nome);
+                        //MostrarLivro();
+                        // MostraMenuSistema();
+                        AdicionarLivro();
                         break;
                     case 4:
                         AdicionarUsuarios();
@@ -74,6 +83,9 @@ namespace InterfaceBiblioteca
                         RemoverUsuarioPeloId();
                         break;
                     case 6:
+                        RemoverLivroPeloId();
+                        break;
+                    case 7:
                         while (!RealizaLoginSistema())
                             Console.WriteLine("Login e Senha Invalidas");
                         //RealizaLoginSistema();
@@ -84,9 +96,9 @@ namespace InterfaceBiblioteca
 
                 }
             }
-            //Aqui vamos pegar número digitado 
-            // var menuEscolhido = int.Parse(Console.ReadKey().KeyChar.ToString());
-            //Execetar a proxima função
+               //Aqui vamos pegar número digitado 
+               // var menuEscolhido = int.Parse(Console.ReadKey().KeyChar.ToString());
+               //Execetar a proxima função
         }
         private static void RemoverUsuarioPeloId()
         {
@@ -104,7 +116,7 @@ namespace InterfaceBiblioteca
         /// <summary>
         /// Metodo que adiciona dentro da nossa lista um novo resgitro de livro 
         /// </summary>
-        private static void AdicionarLivro()
+        public static void AdicionarLivro()
         {
             //Identificamos que o mesmo esta na parte de cadastro de livros do sistema 
             Console.WriteLine("Cadastrar livro dentro do sistema");
@@ -138,16 +150,18 @@ namespace InterfaceBiblioteca
         /// </summary>
         /// <returns>Retorna verdadeiro quando o login e senha forem informados estiverem corretos </returns>
         private static bool RealizaLoginSistema()
-
         {
-            
+            Console.Clear();
+            Console.WriteLine("Informe seu login e senha para acessar o sistema");
+
+            Console.WriteLine("Login:");
             var senhadoUsuario = Console.ReadLine();
+            Console.WriteLine("Senha: ");
             var LoginDoUsuario = Console.ReadLine();
 
-            UsuarioController usuarioController = new UsuarioController();
+            
 
-            return UsuarioController.LoginSistema(new Usuario());
-            return UsuarioController.LoginSistema(new Usuario()
+            return usuarioController.LoginSistema(new Usuario()
             {
                 Login = LoginDoUsuario,
                 Senha = senhadoUsuario
@@ -166,19 +180,44 @@ namespace InterfaceBiblioteca
         private static void AdicionarUsuarios()
         {
             Console.WriteLine("Cadastrar usuario dentro do sistema:");
-            Console.WriteLine("Informe seu login:");          
-            var login = Console.ReadLine();
+
+            Console.WriteLine("Informe seu login:");            
+            var loginUsuario = Console.ReadLine();
+
             Console.WriteLine("Informe sua senha:");
-            var senha = Console.ReadLine();
+            var senhaUsuario = Console.ReadLine();
 
             usuarioController.CadastroUsuario(new Usuario()
             {
-               Login= login,
-               Senha = senha
+               Login= loginUsuario,
+               Senha = senhaUsuario
             });
-            Console.WriteLine("Cadastro realizado com sucesso");
+
+            Console.WriteLine("Usuario Cadastrado com sucesso!");
             Console.ReadKey();
+        }   
+        /// <summary>
+        /// Metodo que remove o livro pelo id 
+        /// </summary>
+
+        private static  void RemoverLivroPeloId()
+        {
+            Console.WriteLine("Remover livro");
+            MostrarLivro();
+            Console.WriteLine("Informe Id para remover livro");
+            var livroId = int.Parse(Console.ReadLine());
+
+            livrosController.RemoverLivroPeloId(livroId);
+
+            Console.WriteLine("Livro removido com sucesso!");
+            Console.ReadKey();
+
         }
+       
+      
+
+        
+            
         
 
     }
