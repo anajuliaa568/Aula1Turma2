@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VendasCarro.Model
+namespace ListagemDeCervejas.Model
 {
-    public class Carros
+    public class Cerveja
     {
         public int Id { get; set; }
-        public int Quantidade { get; set; }
         public string Nome { get; set; }
+        public int Litros { get; set; }
+        public double Alcool { get; set; }
         public double Valor { get; set; }
-        public DateTime Data { get; set; }
-        public bool Ativo { get; set; }
+
+
 
     }
 }

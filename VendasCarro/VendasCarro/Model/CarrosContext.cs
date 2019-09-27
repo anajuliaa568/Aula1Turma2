@@ -9,7 +9,7 @@ namespace VendasCarro.Model
    public class CarrosContext
     {
         public int IdContadorCarros { get; set; }
-        public int IdContadorUsuarios { get; set; }
+       
 
         public CarrosContext()
         {
@@ -119,7 +119,6 @@ namespace VendasCarro.Model
 
 
         }
-
 
         public List<Carros> ListaDeCarros { get; set; }
         

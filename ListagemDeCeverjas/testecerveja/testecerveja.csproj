@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1D9281E-CC63-436B-AAB3-B53350D7DE2E}</ProjectGuid>
+    <ProjectGuid>{81AFE2A2-67F8-4DDB-B6AC-FEBF87464FED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>InterfaceVendas</RootNamespace>
-    <AssemblyName>InterfaceVendas</AssemblyName>
+    <RootNamespace>testecerveja</RootNamespace>
+    <AssemblyName>testecerveja</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ListagemDeCeverjas">
+      <HintPath>..\ListagemDeCeverjas\bin\Debug\ListagemDeCeverjas.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,12 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\VendasCarro\VendasCarro.csproj">
-      <Project>{0e487b41-faa2-4d1f-88f2-854917b790d7}</Project>
-      <Name>VendasCarro</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
