@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaRelatorioCarros", "SistemaRelatorioCarros\SistemaRelatorioCarros.csproj", "{8828B3C7-D1A2-43B3-A14B-C635B6F5AED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSistemaRelatorio", "InterfaceSistemaRelatorio\InterfaceSistemaRelatorio.csproj", "{ED7FCB53-7877-42A2-88AC-B68E11AC6E22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8828B3C7-D1A2-43B3-A14B-C635B6F5AED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8828B3C7-D1A2-43B3-A14B-C635B6F5AED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8828B3C7-D1A2-43B3-A14B-C635B6F5AED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8828B3C7-D1A2-43B3-A14B-C635B6F5AED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7FCB53-7877-42A2-88AC-B68E11AC6E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7FCB53-7877-42A2-88AC-B68E11AC6E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7FCB53-7877-42A2-88AC-B68E11AC6E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7FCB53-7877-42A2-88AC-B68E11AC6E22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E95A6756-78E1-45A5-944C-B05342149072}
+	EndGlobalSection
+EndGlobal
