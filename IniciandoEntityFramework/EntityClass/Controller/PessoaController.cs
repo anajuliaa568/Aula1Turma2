@@ -20,6 +20,17 @@ namespace EntityClass.Controller
         {
             return ContextDB.ListaDePessoas;
         }
+        /// <summary>
+        /// Metodo adiciionar pessoa no banco de dados 
+        /// </summary>
+        /// <param name="item">Pessoa</param>
+        public void AddPessoa(Pessoa item)
+        {
+            ContextDB // Noso banco de dados 
+                .ListaDePessoas//nossa tabela pessoa 
+                .Add(item);// Adicionamos o item 
 
+            ContextDB.SaveChanges();// Salvamos o banco 
+        }
     }
 }
