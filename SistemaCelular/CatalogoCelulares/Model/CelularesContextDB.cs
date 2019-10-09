@@ -12,6 +12,7 @@ namespace CatalogoCelulares.Model
     {
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Celular> Celulares { get; set; }
+        
 
     }
 }
