@@ -13,23 +13,33 @@ namespace LocacaoBiblioteca.Controller
 
         public LivrosController()
         {
-           
         }
-
-       // public List<Livro> ListaDeLivros { get; private set; }
-        //private List<Livro> Livros { get; set; }
-
-        public void AdicionarLivro(Livro parametroLivro )
+        public void AdicionarLivro(Livro parametroLivro)
         {
-            
-            parametroLivro.Id = contextDB.IdContadorLivros++;
-
-           
             contextDB.ListaDeLivros.Add(parametroLivro);
+            contextDB.SaveChanges();
         }
-        public List<Livro> RetorneListaDeLivros()
+        public void DeletarLivro(int id)
         {
-            return contextDB.ListaDeLivros.Where(x => x.Ativo).ToList<Livro>();
+            //Achei o LIVRO
+            var LivroQueEuAcheiNoSQL = contextDB.ListaDeLivros.FirstOrDefault(p => p.Id == id);
+            //Setei o ativo do livro como falso
+            LivroQueEuAcheiNoSQL.Ativo = false;
+            //Salvei as alteracoes.
+            contextDB.SaveChanges();
+
+        }
+
+        public void AtualizarLivro(Livro NovoLivro, int id)
+        {
+            //Achei o LIVRO
+            var LivroQueEuAcheiNoSQL = contextDB.ListaDeLivros.FirstOrDefault(p => p.Id == id);
+            //Setei o ativo do livro como falso
+            LivroQueEuAcheiNoSQL.Nome = NovoLivro.Nome;
+
+            //Salvei as alteracoes.
+            contextDB.SaveChanges();
+
         }
         /// <summary>
         /// metodo para desativar o registro de livro pelo id 
@@ -42,25 +52,13 @@ namespace LocacaoBiblioteca.Controller
                 Livro.Ativo = false;
         }
     }
-   
-    
 
-    
+
+
 }
 
 
 
-    
-
-    
-    
-
-
-
-
-
-
-    
 
 
 
@@ -78,8 +76,24 @@ namespace LocacaoBiblioteca.Controller
 
 
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

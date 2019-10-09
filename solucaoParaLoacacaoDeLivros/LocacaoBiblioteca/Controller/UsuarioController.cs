@@ -40,7 +40,7 @@ namespace LocacaoBiblioteca.Controller
         /// <param name="parametro">Novo usuario que será adicionado a lista</param>
         public void CadastroUsuario(Usuario parametro )
         {
-            parametro.Id = contextDB.IdContadorUsuarios++;
+            //parametro.Id = contextDB.IdContadorUsuarios++;
             //adicionar o meu usuario a minha lista 
             contextDB.ListaDeUsuarios.Add(parametro);
         }

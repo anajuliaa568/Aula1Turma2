@@ -15,6 +15,6 @@ namespace LocacaoBiblioteca.Model
         [MaxLength(30)]//definição de tamanho maximo do campo 
         [Required]//Definindo campo obrigatorio
         public string Nome { get; set; } = "Senhor dos aneis";
-        public object Login { get; set; }
+      
     }
 }
