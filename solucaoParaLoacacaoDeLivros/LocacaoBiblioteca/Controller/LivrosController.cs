@@ -16,8 +16,13 @@ namespace LocacaoBiblioteca.Controller
         }
         public void AdicionarLivro(Livro parametroLivro)
         {
+            //Adicionamos o lista na nossa lista
             contextDB.ListaDeLivros.Add(parametroLivro);
+
+            //Salvamos em nosso banco de dados as informaçoes
             contextDB.SaveChanges();
+
+            
         }
         public void DeletarLivro(int id)
         {
@@ -51,10 +56,14 @@ namespace LocacaoBiblioteca.Controller
             if (Livro != null)
                 Livro.Ativo = false;
         }
+
+        public string ListarLivros()
+        {
+            string retorno ="Lista de livros /n";
+            contextDB.ListaDeLivros.ToList().ForEach(x => retorno = ($"Id:{x.Id} Nome:{x.Nome}"));
+            return retorno;
+        }
     }
-
-
-
 }
 
 

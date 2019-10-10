@@ -42,10 +42,10 @@ namespace InterfaceBiblioteca
                 Console.WriteLine("Sistema de Locação de Livro 1.0");
                 Console.WriteLine("Menu sistema");
                 Console.WriteLine("1 - Listar usuario");
-                Console.WriteLine("2 - listar livro");
+                Console.WriteLine("2 - Listar livro");
                 Console.WriteLine("3 - Cadastrar Livro");
-                Console.WriteLine("4 - cadastro de usuario");
-                Console.WriteLine("5 - remover usuario");
+                Console.WriteLine("4 - Cadastro de usuario");
+                Console.WriteLine("5 - Remover usuario");
                 Console.WriteLine("6 - Remover Livro");
                 Console.WriteLine("7 - Trocar Usuario");           
             
@@ -171,14 +171,14 @@ namespace InterfaceBiblioteca
         }
         public static void MostrarLivro()
         {
-            livrosController.RetorneListaDeLivros().ForEach(i => Console.WriteLine($"Id: {i.Id} Nome do Livro:{i.Nome}"));
 
+            livrosController.ListarLivros();
             Console.ReadKey();
 
         }
         private static void AdicionarUsuarios()
         {
-            Console.WriteLine("Cadastrar usuario dentro do sistema:");
+            Console.WriteLine("--Cadastrar usuario dentro do sistema:--");
 
             Console.WriteLine("Informe seu login:");            
             var loginUsuario = Console.ReadLine();
@@ -201,7 +201,7 @@ namespace InterfaceBiblioteca
 
         private static  void RemoverLivroPeloId()
         {
-            Console.WriteLine("Remover livro");
+            Console.WriteLine("--Remover livro--");
             MostrarLivro();
             Console.WriteLine("Informe Id para remover livro");
             var livroId = int.Parse(Console.ReadLine());
@@ -212,12 +212,6 @@ namespace InterfaceBiblioteca
             Console.ReadKey();
 
         }
-       
-      
-
         
-            
-        
-
     }
 }

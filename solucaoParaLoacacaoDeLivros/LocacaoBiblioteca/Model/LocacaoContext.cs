@@ -7,16 +7,10 @@ using System.Data.Entity;
 
 namespace LocacaoBiblioteca.Model
 {
-
-
     public class LocacaoContext  : DbContext
     {
-
-        public DbSet<Livro> ListaDeLivros { get; set; }
+        public DbSet<Livro> ListaDeLivros { get; set; } 
         public DbSet<Usuario> ListaDeUsuarios { get; set; }
-
-       
-       
         
     }
 }
