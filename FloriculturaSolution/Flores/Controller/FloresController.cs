@@ -15,6 +15,7 @@ namespace Flores.Controller
         {
             return contextDB.Flores.Where(i => i.Ativo == true);
         }
+
         public bool InserirFlor(Flor item)
         {
             if (string.IsNullOrWhiteSpace(item.Nome))
@@ -25,9 +26,17 @@ namespace Flores.Controller
             contextDB.Flores.Add(item);
             contextDB.SaveChanges();
 
+           
             return true;
         }
 
+        public string RetornarTotalQuantidadeFlores()
+        {
+            string retorno = "Total de Flores : ";
+
+            retorno = retorno + GetFlores().Sum(p => p.Quantidade);
+            return retorno;
+        }
 
     }
 }

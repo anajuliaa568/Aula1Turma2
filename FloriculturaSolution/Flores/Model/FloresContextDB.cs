@@ -9,7 +9,7 @@ namespace Flores.Model
 {
     public class FloresContextDB : DbContext
     {
-        public DbSet <Flor> Flores { get; set; }
+        public DbSet<Flor> Flores { get; set; }
 
     }
 }
