@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeBicicleta", "Bicicleta\SistemaDeBicicleta.csproj", "{97BE7DFB-4227-4B16-B373-A6E12972601C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeBikes", "SistemaDeBikes\SistemaDeBikes.csproj", "{FD4DA681-D7C5-4068-90E8-F5EE7A0C4A4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BE7DFB-4227-4B16-B373-A6E12972601C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BE7DFB-4227-4B16-B373-A6E12972601C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BE7DFB-4227-4B16-B373-A6E12972601C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BE7DFB-4227-4B16-B373-A6E12972601C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4DA681-D7C5-4068-90E8-F5EE7A0C4A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4DA681-D7C5-4068-90E8-F5EE7A0C4A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4DA681-D7C5-4068-90E8-F5EE7A0C4A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4DA681-D7C5-4068-90E8-F5EE7A0C4A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8528AA1E-EA8D-4482-A50D-3392B95AA5B9}
+	EndGlobalSection
+EndGlobal
