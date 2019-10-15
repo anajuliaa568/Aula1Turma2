@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <style>
+
+        div.a {
+            text-align: center;
+        }
+        #documento {
+        width: 0cm;
+		height: 10cm;
+		text-align: center;
+		position: absolute;
+        box-shadow: 1px 1px 8px #795548;
+		left: 45%;
+		top: 50%;
+		background-color:white;
+
+
+
+
+          
+            
+        }
+        body {
+            background-image:url('https://thumbs.gfycat.com/VeneratedNaughtyLadybug-small.gif');
+            background-size: cover
+        }
+
+    
+        div.a {
+            text-align: center;
+        }
+    </style>
+    <div class="a">
+        <div id="documento">
+
+            <h3>Usuario</h3>
+            <p>
+                <input type="text"
+                       name="campoTexto"
+                       id="compotexto"
+                       value="Ana Júlia Schweder" />
+            </p>
+            <h3>Senha</h3>
+            <p>
+                <input type="password"
+                       name="senhasegura"
+                       id="senhasegura"
+                       value="senhaAnaJulia" />
+            </p>
+
+            <p><button name="button"> Clique Aqui </button> </p>
+
+            </div>
+            </style>
+            </body>
+</html>

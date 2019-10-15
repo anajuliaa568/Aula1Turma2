@@ -9,54 +9,98 @@
         div.a {
             text-align: center;
         }
+
         #documento {
-        width: 0cm;
-		height: 10cm;
-		text-align: center;
-		position: absolute;
-        box-shadow: 1px 1px 8px #795548;
-		left: 45%;
-		top: 50%;
-		background-color:white;
-
-
-
-
-          
+            width: 50%;
+            height: 90%;
+            text-align: center;
+            margin-top: 20%;
+            margin-left: 25%;
+            box-shadow: 1px 1px 8px #795548;
+            left: 45%;
+            top: 50%;
             
         }
+
         body {
-            background-image:url('https://thumbs.gfycat.com/VeneratedNaughtyLadybug-small.gif');
+            background-image: url('https://image.freepik.com/fotos-gratis/fundo-de-madeira-com-decoracao-floral-nos-cantos_23-2147600607.jpg');
             background-size: cover
+        
         }
 
-    
         div.a {
             text-align: center;
         }
     </style>
+</head>
+<body>
     <div class="a">
         <div id="documento">
 
-            <h3>Usuario</h3>
+            <input type="text"
+                   name="campoTexto"
+                   id="compotexto"
+                   style="width:81%; height:26px;margin-top:10px"
+                   placeholder="Nome Completo:"
+                   value="" />
+
+
+
             <p>
                 <input type="text"
+                       class="w-100"
+                       name="campoTexto"
+                       placeholder="Idade:"
+                       style="width:40%; height:26px;"
+                       id="compotexto"
+                       value="" />
+
+                <!--
+        <h3>Sexo</h3>
+
+            <fieldset id="group1">
+                M <input type="radio" value="">
+                F<input type="radio" value="">
+            </fieldset>-->
+
+
+                <input type="text"
+                       class="w-100"
+                       placeholder="Nacionalidade:"
+                       style="width:40%; height:26px;"
                        name="campoTexto"
                        id="compotexto"
-                       value="Ana Júlia Schweder" />
+                       value=""
             </p>
-            <h3>Senha</h3>
+
+
+
             <p>
-                <input type="password"
-                       name="senhasegura"
-                       id="senhasegura"
-                       value="senhaAnaJulia" />
+                <input type="text"
+                       class="w-100"
+                       name="campoTexto"
+                       id="compotexto"
+                       style="width:40%; height:26px;"
+                       placeholder="CPF:     .     .     -     "
+                       value="" />
+
+
+
+                <input type="text"
+                       class="w-100"
+                       name="campoTexto"
+                       placeholder="Data de Nascimento:     /     /     "
+                       style="width:40%; height:26px;"
+                       id="compotexto"
+                       value=""
             </p>
+            <p><button style="margin-bottom:2%; width:20%; height:38px" name="button ">Enviar</button> </p>
+                
 
-            <p><button name="button"> Clique Aqui </button> </p>
 
-            </div>
-            </style>
-            </body>
+
+        </div>
+    </div>
+</body>
 </html>
 

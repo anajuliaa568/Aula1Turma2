@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Redação</title>
+
+</head>
+<body>
+
+    <style>
+
+        div.a {
+            text-align: center;
+        }
+
+        #documento {
+            width: 21cm;
+            height: 29.7cm;
+            position: absolute;
+            left: 20%;
+            box-shadow: 1px 1px 8px #795548;
+            background-color: yellow;
+            background-image:url('https://image.freepik.com/fotos-gratis/planta-flores-flora-flor-de-girassol-dom_121-63758.jpg');
+           
+        }
+
+        #conteudo {
+            text-align: justify;
+            margin: 90px;
+        }
+    </style>
+    <div id="conteudo">
+        <div id="documento">
+            <div class="a">
+                
+
+                <h1> <p><font color="pink">----------------</font></p></h1>
+
+                <p>
+                    Não acreditava em sinestesia. Bem-te-vis batendo-se contra
+                    janelas não lhe aguçavam a
+                    percepção e não tinha momentos solitários, próximo a janelas,
+                    por exemplo: epifanias que
+                    transcendescem sua alma para depois das córneas,
+                    tímpanos, narinas, papilas e unhas.
+                    Nada disso. Não queria saber das maravilhas sensoriais de
+                    seu-ninguém e estava muito bem obrigado.
+                </p><br>
+
+                <p>
+                    Trabalhava das oito da manhã; almoçava em miúdos,
+                    e voltava ao labor,
+                    até tocarem as três da tarde: quase sete
+                    horas de trabalho, pensou certa vez.
+                    Pensava muitas certas vezes; e muitas vezes pensava
+                    em suas sete horas de trabalho, e em nada mais,
+                    óbvio: não tinha momentos solitários, e seus olhos eram voltados
+                    para fora. Para os dedos
+                    e as paredes de sua sala, por exemplo.
+                    Paredes marrons ou castanhas -
+                    cor de olho de mulher, pensava, certas vezes, mas
+                    sempre com os pés no chão.
+                </p><br>
+
+
+                <p>
+                    Certz vez, como de costume, pensava.
+                    Estava atrasado, e pensava,
+                    enquanto andava pulando, observando o relógio.
+                    Pensava em como se atrasara.
+                    Como pode? Tentou descobrir pensando,
+                    e pensou nas paredes da sua sala:
+                    cor-de-olho-de-mulher, lhe esperando,
+                    sorumbáticas, longas, desacostumadas com o
+                    silêncio sombrio, a escuridão maciça; a solidão
+                    acre de um local bem-fazejo,
+                    onde um homem pode ficar sentado, trabalhando solitário
+                    e pensando, certas vezes,
+                    no castanho-marrom de seu pequeno santuário de sete horas
+                    e um almoço em miúdos.
+                </p><br>
+
+
+                <h3>By: Ana Júlia Schweder </h3>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
