@@ -1,0 +1,19 @@
+﻿div.a {
+    text-align: center;
+}
+
+#documento {
+    width: 0cm;
+    height: 10cm;
+    text-align: center;
+    position: absolute;
+    box-shadow: 1px 1px 8px #795548;
+    left: 45%;
+    top: 50%;
+    background-color: white;
+}
+
+body {
+    background-image: url('https://images1.americanlisted.com/nlarge/beautiful-akc-7-month-old-female-golden-retriever-puppy--champion-sire-americanlisted_45329491.jpg');
+    background-size: cover
+}

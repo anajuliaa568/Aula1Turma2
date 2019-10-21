@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WEB"
+    "\\WEB",
+    "\\WEB\\PrimeiroWebSite",
+    "\\WEB\\WEBAPI"
   ],
-  "SelectedNode": "\\WEB\\InserçãoDeTexto",
+  "SelectedNode": "\\WEB\\WEBAPI\\index.html",
   "PreviewInSolutionExplorer": false
 }
