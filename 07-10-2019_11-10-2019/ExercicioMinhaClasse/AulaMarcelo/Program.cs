@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AulaMarcelo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -31,7 +31,7 @@ namespace AulaMarcelo
                 }
                 else
                 {
-                    i --;
+                    i--;
                 }
 
              //bool ehRepetido =  numeros.Contains(ValorGeradoAleatoriamente)

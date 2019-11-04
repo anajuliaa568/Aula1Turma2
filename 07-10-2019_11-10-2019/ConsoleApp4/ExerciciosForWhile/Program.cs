@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExerciciosForWhile
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -36,7 +36,7 @@ namespace ExerciciosForWhile
                 if (wordFind == compareWord)
                     contWordFind++;
             }
-            //retorna zero pq ele precisa de um tipo pode ser qualquer valor (tipo uma assinatura).
+            //retorna zero porque ele precisa de um tipo, pode ser qualquer valor (tipo assinatura).
             return contWordFind;
         }
 

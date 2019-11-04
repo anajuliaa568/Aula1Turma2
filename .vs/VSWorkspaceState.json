@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\WEB",
+    "\\WebSiteAtividade",
+    "\\WEB\\WEBAPI",
+    "\\WEB\\WEBAPI\\outroExemplo",
+    "\\WEB\\WEBAPI\\WBPExercicio1",
     "\\WEB\\WEBAPI\\WBPExercicio1\\css",
-    "\\WEB\\WEBAPI\\WBPExercicio1\\js"
+    "\\WEB\\WEBAPI\\WBPExercicio1\\css\\js"
   ],
+  "SelectedNode": "\\WEB\\WEBAPI\\outroExemplo\\index.html",
   "PreviewInSolutionExplorer": false
 }

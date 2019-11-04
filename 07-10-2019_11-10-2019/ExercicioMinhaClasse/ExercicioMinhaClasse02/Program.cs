@@ -10,19 +10,19 @@ using System.Globalization;
 namespace ExercicioMinhaClasse02.model
 
 {
-    class Program
+    public class Program
     {
         static List<Pessoa> listaPessoas = new List<Pessoa>();
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite 1 para inserir.");
+            Console.WriteLine("Digite 1 para inserir:");
             var opcao = Console.ReadLine();
 
             while (opcao == "1")
             {
                 AdicionarLista();
-                Console.WriteLine("Digite 1 para inserir:");
+                Console.WriteLine("Digite 1 para inserir");
                 opcao = Console.ReadLine();
             }
             
@@ -38,7 +38,7 @@ namespace ExercicioMinhaClasse02.model
             Console.WriteLine("Informe o nome:");
             objetoPessoa.Nome = Console.ReadLine();
 
-            Console.WriteLine("Informe Idade:");
+            Console.WriteLine("Informe a idade:");
             objetoPessoa.Idade = int.Parse(Console.ReadLine());
 
            Console.WriteLine("Informe o sexo:");

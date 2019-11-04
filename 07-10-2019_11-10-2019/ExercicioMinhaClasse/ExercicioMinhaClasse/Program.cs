@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExercicioMinhaClasse
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
@@ -14,12 +14,12 @@ namespace ExercicioMinhaClasse
 
             amigos02.Add(new Amigos()
             {
-                Nome = " Marlon",
-                tempoDeAmizade = 3,
-                Nome2 = " Karla",
-                tempoDeAmizade2 = 10,
-                Nome3 = " kate",
-                tempoDeAmizade3 = 1
+                Nome = " Tamara ",
+                tempoDeAmizade = 1,
+                Nome2 = " Karine ",
+                tempoDeAmizade2 = 2,
+                Nome3 = " Ana Júlia ",
+                tempoDeAmizade3 = 3
 
             }) ;
 
